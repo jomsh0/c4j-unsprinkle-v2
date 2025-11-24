@@ -1,14 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { srcSet } from '../../util';
+
 const Hero = () => {
   return (
     <Wrapper>
-      <HeroImage src="/images/hero-img.jpg" />
-      <Swoop src="/swoop.svg" />
+      <picture>
+        <source type="image/avif" srcSet={srcSet(src, "avif")} />
+        <source type="image/jpeg" srcSet={srcSet(src, "jpg")} />
+        <HeroImage alt="Portrait of a serious-looking cat with glassy blue eyes" src={src} />
+      </picture>
+      <Swoop alt="" src="/swoop.svg" />
     </Wrapper>
   );
 };
+
+const src = "/images/hero-img.jpg"
 
 const Wrapper = styled.section`
   position: relative;

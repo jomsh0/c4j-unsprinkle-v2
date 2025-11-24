@@ -7,6 +7,11 @@ import Hero from '../Hero';
 import MainContent from '../MainContent';
 import Footer from '../Footer';
 
+// Supports weights 100-900
+import '@fontsource-variable/inter';
+// Supports weights 100-900
+import '@fontsource-variable/inter/wght-italic.css';
+
 const App = () => {
   return (
     <>
